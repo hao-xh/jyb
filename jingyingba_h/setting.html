@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>个人中心</title>
+    <link rel='icon' href='img/ico.ico' type=‘image/x-ico’ />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style media="screen">
+      #hh_warContent{ width: 100%; background: #f5f5f5; overflow: hidden;}
+      #hh_content{ width: 1225px; margin: 30px auto;}
+      #hh_content .options{ background: #fff; width: 170px;}
+      #hh_content .options li{ height: 48px; line-height: 48px; padding-left: 20px; font-size: 14px;}
+      #hh_content .options li:hover{ border-left: 3px solid #6ecbb4; background: #fafafa; cursor: pointer;}
+      .optionsLi{ border-left: 3px solid #6ecbb4; background: #fafafa;}
+      #hh_content .content{ width: 1039px; background: #fff; margin-left: 15px; margin-bottom: 30px; position: relative;}
+      #hh_content .content .reset{ padding: 127px 0 127px 227px;}
+      #hh_content .content .reset div{ margin-bottom: 12px;}
+      #hh_content .content .reset span{ color: #666; font-size: 14px; padding-left: 127px; margin-bottom: 15px; display: inline-block;}
+      #hh_content .content .reset em{ display: inline-block; width: 120px; height: 38px; color: #333; font-size: 15px; text-align: right;}
+      #hh_content .content .reset input{ padding: 0 10px; width: 286px; height: 36px;}
+      #hh_content .content .reset p{ margin-left: 8px; color: red; font-size: 14px; display: inline-block;}
+      #hh_content .content .reset p strong{ display: inline-block; width: 16px; height: 16px; background: url("img/ico_bg.png") -1px -146px no-repeat; float: left;}
+      #hh_content .content .reset .prompt{ margin-left: 200px; font-size: 14px;}
+      #hh_content .content .reset .btn{ width: 130px; height: 35px; background: #29b572; text-align: center; line-height: 35px; color: #fff; font-size: 15px; margin: 40px 0 0 125px; cursor: pointer;}
+      #hh_content .content .students{ padding-top: 75px; padding-bottom: 92px; width: 550px; margin: auto;}
+      #hh_content .content .students h3{ color: #333; font-size: 22px; margin-bottom: 63px;}
+      #hh_content .content .students div{ margin-bottom: 12px; height: 38px; line-height: 38px;}
+      #hh_content .students div input{ width: 286px; height: 36px; color: #333; padding: 0 10px;}
+      #hh_content .students div em{ font-size: 14px; color: #333;}
+      #hh_content .students .btn{ width: 135px; height: 35px; background: #29b572; text-align: center; line-height: 35px; color: #fff; font-size: 14px; margin: 50px 0 0 70px; cursor: pointer;}
+      #hh_content .students .prompt { width: 550px; height: 38px; line-height: 38px;}
+      #hh_content .students .prompt em{ width: 16px; height: 16px; float: left; background: url("img/ico_bg.png") 0 -97px no-repeat; margin: 12px 6px 0 80px;}
+      #hh_content .order{ width: 1039px; margin-left: 15px; margin-bottom: 30px;}
+      #hh_content .order h3{ font-size: 22px; color: #333; margin-bottom: 20px;}
+      #hh_content .order .infor{ width: 1039px; background: #fff;}
+      #hh_content .order .infor ul{ width: 100%; height: 66px; line-height: 66px; margin-bottom: 18px;}
+      #hh_content .order .infor ul li{ display: inline-block; padding: 0 45px; font-size: 16px; cursor: pointer;}
+      .inforLi{ border-top: 4px solid #6ecbb4;}
+      #hh_content .order .infor .ordCot{ width: 979px; margin: auto; border: 1px solid #e8e8e8;}
+      #hh_content .order .infor .order_class{ height: 40px; line-height: 40px; background: #fafafa; padding: 0 15px; border: 1px solid #e8e8e8;}
+      #hh_content .order .infor .order_class p{ display: inline-block; width: 130px; text-align: center; font-size: 14px; color: #666666;}
+      #hh_content .order .infor .order_class p:first-of-type{ width: 410px;}
+      #hh_content .order .infor .order_detailed{ height: 115px; margin: 0 15px; border-bottom: 1px solid #e8e8e8; overflow: hidden; font-size: 14px; color: #333; line-height: 115px;}
+      #hh_content .order .infor .order_detailed img{ width: 108px; height: 66px; margin-top: 22px; float: left; margin-right: 20px;}
+      #hh_content .order .infor .order_detailed strong{ float: left; margin-right: 140px; display: inline-block; width: 140px;}
+      #hh_content .order .infor .order_detailed strong:hover{ color: green; cursor: pointer;}
+      #hh_content .order .infor .order_detailed p{ float: left; display: inline-block; text-align: center;}
+      #hh_content .order .infor .order_detailed p:nth-of-type(1){ margin-right: 50px; width: 130px;}
+      #hh_content .order .infor .order_detailed p:nth-of-type(2){ margin-right: 95px; width: 46px;}
+      #hh_content .order .infor .order_detailed p:nth-of-type(3){ margin-right: 80px; width: 62px;}
+      #hh_content .order .infor .order_detailed span{ display: inline-block; width: 70px; height: 28px; text-align: center; line-height: 28px; color: #fff; background: #ea9b65;}
+      #hh_content .order .infor .order_detailed span:hover{ background: #de7e3c; cursor: pointer;}
+      #hh_prompt{ color: green; font-size: 25px; position: absolute; z-index: 1010; top: 95px; left: 400px; display: none;}
+    </style>
+  </head>
+  <body>
+    <div id="war_header">
+      <div id="header" class="clear">
+        <div class="logo fl">
+          <a href="JavaScript:;">
+            <img src="img/log.png" alt="精英吧">
+          </a>
+        </div>
+        <div class="img fl"><img src="img/113200.png" alt="精英吧"></div>
+        <div class="position fl">
+          <span class="fl">北京</span>
+          <p class="fl"></p>
+        </div>
+        <ul class="nav fl">
+          <li class="colorGreen">首页</li>
+          <li>线下课程</li>
+          <li>在线课程</li>
+          <li>互联网头条</li>
+          <li>学校</li>
+        </ul>
+        <div class="problem fl">
+          <em></em>提问
+        </div>
+        <div class="login fr">
+          <a href="login.html?1">登录</a>
+          <em>丨</em>
+          <a href="login.html?2">注册</a>
+        </div>
+        <div class="success fr">
+          <img class="fl" src="img/headportrait2.png" alt="">
+          <a class="fl" href="javascript:;">
+            <span>个人中心</span><em></em>
+          </a>
+        </div>
+        <ul class="setSuccess">
+          <li>账号设置</li>
+          <li>我是在校生</li>
+          <li>我的订单</li>
+          <li>退出</li>
+        </ul>
+        <ul class="allCity">
+          <li><img class="selected" src="img/city1.png" alt="北京校区" /><br /><span>北京</span></li>
+          <li><img src="img/city2.png" alt="大连校区" /><br /><span>大连</span></li>
+          <li><img src="img/city3.png" alt="郑州校区" /><br /><span>郑州</span></li>
+          <li><img src="img/city4.png" alt="上海校区" /><br /><span>上海</span></li>
+          <li><img src="img/city5.png" alt="广州校区" /><br /><span>广州</span></li>
+          <li><img src="img/city6.png" alt="西安校区" /><br /><span>西安</span></li>
+          <li><img src="img/city7.png" alt="武汉校区" /><br /><span>武汉</span></li>
+        </ul>
+        <i></i>
+      </div>
+    </div>
+    <div id="hh_warContent">
+      <div id="hh_content">
+        <ul class="options fl">
+          <li name="1">账号信息</li>
+          <li name="2">我是在校生</li>
+          <li name="3">我的订单</li>
+        </ul>
+        <div class="content fl">
+          <div class="reset">
+            <span>重设您的账号密码</span>
+            <div class="oldPwd"><em>当前密码：</em>&nbsp;<input type="password"><p></div>
+            <div class="newPwd1"><em>新密码：</em>&nbsp;<input type="password"><p></p></div>
+            <div class="newPwd2"><em>再次确认密码：</em>&nbsp;<input type="password"><p></p></div>
+            <div class="prompt"></div>
+            <div class="btn">提交</div>
+          </div>
+          <div class="students" style="display:none">
+            <h3>在校生信息</h3>
+            <div class="name"><em>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</em><input type="text"></div>
+            <div class="school"><em>所在学校：</em><input type="text"></div>
+            <div class="depar"><em>所在系别：</em><input type="text"></div>
+            <div class="profe"><em>所在专业：</em><input type="text"></div>
+            <div class="tcss"><em>所在班级：</em><input type="text"></div>
+            <div class="prompt"></div>
+            <div class="btn">提交</div>
+          </div>
+          <div class="order fl" style="display:none">
+            <h3>我的订单</h3>
+            <div class="infor">
+              <ul>
+                <li index="1" class="inforLi">全部</li>
+                <li index="2">待付款</li>
+                <li index="3">付款失败</li>
+                <li index="4">待评价</li>
+                <li index="5">已评价</li>
+              </ul>
+              <div class="ordCot">
+                <div class="order_class">
+                  <p>订单信息</p>
+                  <p>下单时间</p>
+                  <p>金额</p>
+                  <p>交易状态</p>
+                  <p>操作</p>
+                </div>
+                <div class="displayNone">
+                  <!-- <div class="order_detailed">
+                    <img src="img/5791f23413a84.jpg" alt="">
+                    <strong>产品需求分析与用户体</strong>
+                    <p>2013-08-05 10:02:41</p>
+                    <p>￥5000</p>
+                    <p>未支付</p>
+                    <span>付款</span>
+                  </div> -->
+                </div>
+                <div id="hh_prompt">恭喜，付款成功！</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="war_footer">
+      <div id="footer">
+        <div class="up">
+          <div class="link">
+            <h3>友情链接</h3>
+            <strong>陌陌科技</strong>
+            <strong>触控科技</strong>
+            <strong>互动百科</strong>
+            <strong>搜房网</strong>
+            <a class="fr" href="friendlink.html">更多 》</a>
+          </div>
+          <div class="lab fl width165">
+            <h4 class="font16">我们的实验室</h4>
+            <span class="font15">什么是精英吧</span>
+          </div>
+          <div class="about fl width165">
+            <h4 class="font16">关于我们</h4>
+            <span class="font15">有才教育简介</span><br />
+            <span class="font15">联系我们</span><br />
+            <span class="font15">加入我们</span><br />
+          </div>
+          <div class="course fl width165">
+            <h4 class="font16">现有课程</h4>
+            <span class="font15">unity3D</span>
+          </div>
+          <div class="help fl width165">
+            <h4 class="font16">帮助</h4>
+            <span class="font15">常见问题</span><br />
+            <span class="font15">版权声明</span><br />
+            <span class="font15">服务条款</span><br />
+          </div>
+          <div class="feedback fl">
+            <h4 class="font16">反馈方式</h4>
+            <span class="font15">电子邮箱: help@jingyingba.com</span><br />
+            <span class="font15">微信反馈: 精英吧(jingyingbacom)</span><br />
+            <img src="img/jyb_code.jpg" alt="微信二维码">
+          </div>
+          <div class="appcode fr">
+            <h4 class="font16">精英吧APP扫描下载</h4>
+            <img src="img/app_code.png" alt="下载APP"><br />
+            <strong>(扫码下载)</strong>
+          </div>
+        </div>
+        <div class="down">
+          <div class="company">
+            <span class="font15">才信教育©2015-2017</span>
+            <em class="font15">|</em>
+            <strong class="font15">京ICP备16013954号</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="jquery-1.12.1.js" charset="utf-8"></script>
+  <script src="cookie.js" charset="utf-8"></script>
+  <script src="setting.js" charset="utf-8"></script>
+  <script src="header.js" charset="utf-8"></script>
+  <script src="footer.js" charset="utf-8"></script>
+</html>
