@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>线下课程</title>
+    <link rel='icon' href='img/ico.ico' type=‘image/x-ico’ />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <style media="screen">
+      .hoverColor{ color: #29b572;}
+      .clickBorder{ border-top: 3px solid #29b572;}
+      #hh_content{ width: 100%; background: #f5f5f5; overflow:hidden; font-size: 15px;}
+      #content{ width: 1225px; margin: 20px auto;}
+      #content .nav{ width: 100%; background: #fff; overflow: hidden; margin-bottom: 30px;}
+      #content .nav span{ margin-left: 20px;height: 60px; line-height: 60px;}
+      #content .nav span em{ display: inline-block; margin-right:5px; width: 13px; height: 13px; background: url("img/ico_bg.png") 0 -801px no-repeat;}
+      #content .nav li{ display: inline-block; float: left; height: 60px; line-height: 60px; margin-left: 35px; cursor:pointer;}
+      #content .nav li:hover{ color: #29b572;}
+      #content .content{ background: #fff; width: 100%; overflow: hidden;}
+      #content .sorting{ margin-bottom: 5px;}
+      #content .sorting li{ display: inline-block; width: 110px; height: 50px; text-align: center; line-height: 50px;}
+      #content .sorting li:hover{ color: #29b572; cursor: pointer;}
+      #content .sorting li em{ width: 7px; height: 8px; display: inline-block; background: url("img/ico_bg.png") -4px -852px no-repeat; margin-left: 3px;}
+      #content .sorting li:hover em{ background: url("img/ico_bg.png") -4px -870px no-repeat;}
+      #content .sorting span{ font-size: 13px; color: #808080; margin: 20px 20px 0 0;}
+      #content .goods{ width: 100%; margin-left: 11px; overflow: hidden;}
+      #content .goods .goodsBox{ width: 215px; min-height: 246px; padding: 12px; overflow: hidden; float: left; cursor: pointer; border: 1px solid #fff; margin-bottom: 8px; }
+      #content .goods .goodsBox img{ width: 100%; height: 130px; margin-bottom: 15px;}
+      #content .goods .goodsBox strong{ display: block; font-size: 15px; color: #333333; margin-bottom: 3px;}
+      #content .goods .goodsBox p{ color: #808080; font-size: 12px; line-height: 15px;}
+      #content .goods .goodsBox span{ margin-top: 5px; font-size: 20px; color: #ea9b65; float: left;}
+      #content .goods .goodsBox em{ font-size: 16px; margin-right: 1px;}
+      #content .goods .goodsBox .right{ float: right; margin-top: 9px; font-size: 11px; color: #999;}
+      #content .goods .goodsBox:hover{ border: 1px solid #e0e0e0;}
+      #content .goods .goodsBox:hover strong{ color: #29b572;}
+      #content .paging{ width: 100%; height: 20px; background: #fff; padding-bottom: 10px; text-align: center; font-size: 11px; color: #333;}
+      #content .paging .upPaging{ display: inline-block; margin-right: -2px; background: #e0e0e0; height: 100%; line-height: 20px; cursor: pointer;}
+      #content .paging .downPaging{ display: inline-block; margin-left: 8px; background: #e0e0e0; height: 100%; line-height: 20px; cursor: pointer;}
+      #content .paging .upPaging:hover{ color: #ec7d7d;}
+      #content .paging .downPaging:hover{ color: #ec7d7d;}
+      #content .paging .pagingNum{ display: inline-block;}
+      #content .paging .pagingNum span{ display: inline-block; width: 20px; height: 20px; line-height: 20px; cursor: pointer; margin-left: 10px;}
+      #content .paging .pagingNum span:hover{  background: #e0e0e0; color: #000;}
+      .pagingLi{  background: #e0e0e0; color: #000;}
+    </style>
+  </head>
+  <body>
+    <div id="war_header">
+      <div id="header" class="clear">
+        <div class="logo fl">
+          <a href="JavaScript:;">
+            <img src="img/log.png" alt="精英吧">
+          </a>
+        </div>
+        <div class="img fl"><img src="img/113200.png" alt="精英吧"></div>
+        <div class="position fl">
+          <span class="fl">北京</span>
+          <p class="fl"></p>
+        </div>
+        <ul class="nav fl">
+          <li>首页</li>
+          <li class="colorGreen">线下课程</li>
+          <li>在线课程</li>
+          <li>互联网头条</li>
+          <li>学校</li>
+        </ul>
+        <div class="problem fl">
+          <em></em>提问
+        </div>
+        <div class="login fr">
+          <a href="../jingyingba_h/login.html?1">登录</a>
+          <em>丨</em>
+          <a href="../jingyingba_h/login.html?2">注册</a>
+        </div>
+        <div class="success fr">
+          <img class="fl" src="img/headportrait2.png" alt="">
+          <a class="fl" href="javascript:;">
+            <span>个人中心</span><em></em>
+          </a>
+        </div>
+        <ul class="setSuccess">
+          <li>账号设置</li>
+          <li>我是在校生</li>
+          <li>我的订单</li>
+          <li>退出</li>
+        </ul>
+        <ul class="allCity">
+          <li><img class="selected" src="img/city1.png" alt="北京校区" /><br /><span>北京</span></li>
+          <li><img src="img/city2.png" alt="大连校区" /><br /><span>大连</span></li>
+          <li><img src="img/city3.png" alt="郑州校区" /><br /><span>郑州</span></li>
+          <li><img src="img/city4.png" alt="上海校区" /><br /><span>上海</span></li>
+          <li><img src="img/city5.png" alt="广州校区" /><br /><span>广州</span></li>
+          <li><img src="img/city6.png" alt="西安校区" /><br /><span>西安</span></li>
+          <li><img src="img/city7.png" alt="武汉校区" /><br /><span>武汉</span></li>
+        </ul>
+        <i></i>
+      </div>
+    </div>
+    <div id="hh_content">
+      <div id="content">
+        <ul class="nav">
+          <span class="fl"><em></em>分类:</span>
+          <li class="hoverColor">全部</li>
+          <li>iOS</li>
+          <li>Android</li>
+          <li>HTML5</li>
+          <li>Unity-3D</li>
+          <li>产品经理</li>
+        </ul>
+        <div class="content">
+          <ul class="sorting">
+            <li class="hoverColor clickBorder">默认</li>
+            <li>销量<em></em></li>
+            <li>价格<em></em></li>
+            <li>评分<em></em></li>
+            <span class="fr">共39条</span>
+          </ul>
+          <div class="goods">
+            <!-- <div class="goodsBox">
+              <img src="img/5791f297d55c6.jpg" alt="">
+              <strong>产品设计之道</strong>
+              <p>【中科院计算所培训中心】科学院南路中关村958号楼1层中科天博</p>
+              <span><em>￥</em>5800</span>
+              <span class="right">已售13</span>
+            </div> -->
+          </div>
+        </div>
+        <div class="paging" onselectstart="return false">
+          <div class="upPaging">上一页</div>
+          <div class="pagingNum">
+            <!-- <span>1</span>
+            <span>2</span>
+            <span>3</span> -->
+          </div>
+          <div class="downPaging">下一页</div>
+        </div>
+      </div>
+    </div>
+    <div id="war_footer">
+      <div id="footer">
+        <div class="up">
+          <div class="link">
+            <h3>友情链接</h3>
+            <strong>陌陌科技</strong>
+            <strong>触控科技</strong>
+            <strong>互动百科</strong>
+            <strong>搜房网</strong>
+            <a class="fr" href="../jingyingba_h/friendlink.html">更多 》</a>
+          </div>
+          <div class="lab fl width165">
+            <h4 class="font16">我们的实验室</h4>
+            <span class="font15">什么是精英吧</span>
+          </div>
+          <div class="about fl width165">
+            <h4 class="font16">关于我们</h4>
+            <span class="font15">有才教育简介</span><br />
+            <span class="font15">联系我们</span><br />
+            <span class="font15">加入我们</span><br />
+          </div>
+          <div class="course fl width165">
+            <h4 class="font16">现有课程</h4>
+            <span class="font15">unity3D</span>
+          </div>
+          <div class="help fl width165">
+            <h4 class="font16">帮助</h4>
+            <span class="font15">常见问题</span><br />
+            <span class="font15">版权声明</span><br />
+            <span class="font15">服务条款</span><br />
+          </div>
+          <div class="feedback fl">
+            <h4 class="font16">反馈方式</h4>
+            <span class="font15">电子邮箱: help@jingyingba.com</span><br />
+            <span class="font15">微信反馈: 精英吧(jingyingbacom)</span><br />
+            <img src="img/jyb_code.jpg" alt="微信二维码">
+          </div>
+          <div class="appcode fr">
+            <h4 class="font16">精英吧APP扫描下载</h4>
+            <img src="img/app_code.png" alt="下载APP"><br />
+            <strong>(扫码下载)</strong>
+          </div>
+        </div>
+        <div class="down">
+          <div class="company">
+            <span class="font15">才信教育©2015-2017</span>
+            <em class="font15">|</em>
+            <strong class="font15">京ICP备16013954号</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="jquery-1.12.1.js" charset="utf-8"></script>
+  <script src="header.js" charset="utf-8"></script>
+  <script src="linedown.js" charset="utf-8"></script>
+  <script src="footer.js" charset="utf-8"></script>
+</html>
